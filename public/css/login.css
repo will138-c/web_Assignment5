@@ -1,0 +1,28 @@
+form {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-200px, -100px);
+    width: 400px;
+    height: 250px;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+form h3 {
+    text-align: center;
+}
+
+form div {
+    margin: 20px 130px;
+}
+
+.message {
+    color: red;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#submit {
+    margin-left: 30px;
+}

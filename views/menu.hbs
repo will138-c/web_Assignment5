@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <div class="nav">
+        <img src="images/logo.jpg" alt="">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/menu">On the menu</a></li>
+        </ul>
+        <div class="sign">
+            <div><a href="/cart-dash">Shopping Cart</a></div>
+            <div><a href="login">Log in</a></div>
+            <div><a href="signup">Sign up</a></div>
+        </div>
+    </div>
+
+    <h1 class="header">Week Chef Recommandations</h1>
+
+    <div class="body">
+        {{#each data}}
+        <div class="elem">
+            <img src="images/{{photo}}" alt="">
+            <div>
+                <p>Id: {{id}}</p>
+                <p>Title: {{title}}</p>
+                <p>Description: {{description}}</p>
+                <p>Cooking Time: {{time}} min</p>
+                <p>Category: {{category}}</p>
+                <p>Servings: {{servings}}</p>
+                <p>Calories: {{calories}}</p>
+                <p>Price: ${{price}}</p>
+                <button><a href="/cart-add?id={{id}}&title={{title}}&price={{price}}">Add to Cart</a></button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    <div class="footer">
+        <div>
+            <p>QJD PEKING DUCK RESTARANT</p>
+            <p>7095 WOODBINE AVE, MARKHAM, ON</p>
+        </div>
+        <div>
+            <p>905- 604-7798</p>
+            <p>QJDPEKINGDUCK@GMAIL.COM</p>
+        </div>
+    </div>
+</body>
+</html>

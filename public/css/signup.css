@@ -1,0 +1,32 @@
+form {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-200px, -100px);
+    width: 400px;
+    height: 350px;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+form h3 {
+    text-align: center;
+}
+
+form p {
+    text-align: center;
+}
+
+form div {
+    margin: 10px 130px;
+}
+
+.message {
+    color: red;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#submit {
+    margin-left: 20px;
+}

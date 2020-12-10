@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+    <form action="/signup" method="post">
+        <h3 class="title">Sign up</h3>
+        <p>Creat your account by entering your email address and choosing a password</p>
+        <div>
+            <input type="text" name="firstname" placeholder="First Name">
+        </div>
+        <div>
+            <input type="text" name="lastname" placeholder="Last Name">
+        </div>
+        <div>
+            <input type="email" name="email" placeholder="Email">
+        </div>
+        <div>
+            <input type="password" name="password" placeholder="Password">
+        </div>
+        <div class="message">
+            <p>{{data}}</p>
+        </div>
+        <div>
+            <input type="submit" value="Sign up" id="submit">
+            <input type="reset" value="Clear" id="reset">
+        </div>
+    </form>
+</body>
+</html>

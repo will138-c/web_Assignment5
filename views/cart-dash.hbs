@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cart-dash.css">
+</head>
+<body>
+    <div class="nav">
+        <img src="images/logo.jpg" alt="">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/menu">On the menu</a></li>
+        </ul>
+        <div class="logout">
+            <div><a href="/logout">Log out</a></div>
+        </div>
+    </div>
+
+    <h1 class="header">QJD PEKING DUCK (MARKHAM)  RESAURANT</h1>
+
+    {{#if message}}
+            <h3 style="color: red;">{{message}}</h3>
+    {{/if}}
+
+    <div class="body">
+        <h1>Welcome to Shopping Cart, {{data.firstname}}</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each data.dish}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{itemtitle}}</td>
+                    <td>${{price}}</td>
+                    <td><button><a href="/cart-delete?title={{itemtitle}}">delete</a></button></td>
+                </tr>
+                {{/each}}
+                <tr>
+                    <td colspan="3">Total: ${{data.total}}</td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="placeorder"><button><a href="/cart-placeorder">Place Order</a></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer">
+        <div>
+            <p>QJD PEKING DUCK RESTARANT</p>
+            <p>7095 WOODBINE AVE, MARKHAM, ON</p>
+
+        </div>
+        <div>
+            <p>905- 604-7798</p>
+            <p>QJDPEKINGDUCK@GMAIL.COM</p>
+        </div>
+    </div>
+</body>
+</html>
